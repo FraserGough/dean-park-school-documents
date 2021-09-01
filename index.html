@@ -4,12 +4,38 @@
   <title>Dean Park Primary School Parent Council Constitution</title>
 <head>
 <style>
+#ToCInner {
+  padding-top:1em;
+  padding-bottom:2em;
+}
+a {
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+.banner {
+  position:fixed;
+  width:100%;
+  background-color:white;
+  top:0;
+  margin-left:-2em;
+  padding-bottom:0.4em;
+  padding-top:0.2em;
+}
 html {
    scroll-behaviour: smooth;
 }
+#tableOfContents {
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+}
+#constitutionContainer h1 {
+  padding-top:2em;
+}
 h1 {
   text-align:center;
-  padding-top:2em;
 }
 .squareBrackets {
   background-color:#f5ed87;
@@ -63,6 +89,9 @@ article p.sub-paragraph {
 article p.sub-sub-paragraph {
  margin-left:10em; 
 }
+article p.sub-sub-sub-paragraph {
+  margin-left:13em;
+}
 .drafterCommentary {
   background-color:#e6f2ff;
   padding:0.5em;
@@ -83,9 +112,30 @@ article p.sub-sub-paragraph {
  font-weight:normal;
 }
 </style>
+<script>
+function toggle() {
+ for (let i=0; i<2; i++) {
+   if (i == 0) {
+     var targetElement = document.getElementById("tableOfContents")
+   } else {
+     var targetElement = document.getElementById("constitutionContainer")
+   }
+   if (targetElement.style.display == "none") {
+     targetElement.style.display = "block" 
+   } else {
+     targetElement.style.display = "none"
+   }
+  }
+}
+</script>
 </head>
 <body>
+<div id="tableOfContents" style="display:none;">
+  <div class="banner"><button onclick="toggle()">X</button></div>
+  <div id="ToCInner"></div>
+</div>
 <div id="constitutionContainer">
+  <div class="banner"><button onclick="toggle()">Contents</button></div>
   <section class="preamble" id="preamble">
     <h1 id="preamble">Preamble</h1>
     <div id="preamble-i"><p><span class="id-number">(i)</span><span class="text">Dean Park Primary School Parent Council is the Parent Council established for Dean Park primary school in Balerno, Edinburgh.</span></p></div>
@@ -131,19 +181,13 @@ article p.sub-sub-paragraph {
           <div id="1-7-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">express disagreement for the purpose of <a href="#1-3">paragraph (3)</a>,</span></p></div>
           <div id="b1-7-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">vote differently for the purposes of sub-paragraphs <a href="#1-5-a">(a)</a> and <a href="#1-5-b">(b)</a> of <a href="#1-5">paragraph (5)</a>.</span></p></div>
       </div>
-      <div class="drafterCommentary">
-        <p>As discussed, allowance now made for proxy voting.</p>
-      </div>
    </article>
    <article id="2">
      <h3><span class="id-number">2</span><span class="text">Decision outwith meeting</span></h3>
      <div id="2-1"><p class="paragraph"><span class="id-number">(1)</span><span class="text">A decision of the Council is to be taken outwith a Council meeting in the following way.</span></p></div>
-     <div id="2-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text"><span class="squareBrackets">[The chair or vice chair] [Any member]</span> may, in writing, propose a decision to all of the other members and invite them to indicate whether they agree with it. </span></p></div>
+     <div id="2-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">Any member may, in writing, propose a decision to all of the other members and invite them to indicate whether they agree with it. </span></p></div>
      <div id="2-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">If a simple majority of members indicate, in writing, that they agree with it, the proposed decision is adopted as the Council's decision (except in the case of a proposed decision to remove a member for which see <a href="#23">article 23</a>).</span></p></div>
      <div id="2-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">Where a decision has been taken outwith a meeting, that must be noted at the next meeting of the Council and recorded in the minutes of that meeting.</span></p></div>
-     <div class="drafterCommentary">
-      <p>Should any member be able to propose taking a decision by Whatsapp or email?</p><p>I haven't included a mechanism for dealing with tied votes as there is in b001. If a decision's so contentious that votes are tied, perhaps it should be taken back to a meeting for discussion rather than settled by Whatsapp vote?</p> 
-     </div> 
    </article>
    <article id="3">
       <h3><span class="id-number">3</span><span class="text">Member with conflict of interest excluded from decision making</span></h3>
@@ -154,9 +198,6 @@ article p.sub-sub-paragraph {
       <div id="3-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">For the purposes of this article, a person has a conflict of interest in relation to a matter if the person has a connection to it (direct or indirect) which would raise in the mind of a fair-minded observer a suspicion that, in dealing with the matter, the person may put other interests ahead of those of the Council.</span></p></div>
       <div id="3-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">Being the parent of a child who is attending the school, has attended it, or can be expected to attend it, cannot create a conflict of interest for the purposes of this article.</span></p></div>
       <div id="3-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">In <a href="#3-3">paragraph (3)</a>, "parent" has the meaning given in <a href="https://www.legislation.gov.uk/ukpga/1980/44/section/135">section 135(1) of the Education (Scotland) Act 1980</a>.</span></p></div>
-   <div class="drafterCommentary">
-     <p>In the last draft the proposition was that a member with a conflict was to play no part in making a decision, but as discussed it's not necessarily a problem for the person to play a part in the sense of contributing to discussion (provided everyone's aware of the conflict). So I've adjusted to be clearer about what playing no part means in case it was thought to mean can't be part of discussing.</p>
-   </div>
    </article>
    <h2 class="interstitialHeading">Council meetings</h2>
    <article id="4">
@@ -173,7 +214,13 @@ article p.sub-sub-paragraph {
      </div>
      <div id="5-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">The chair may only decline a request to have a meeting on a particular subject if:</span></p>
            <div id="5-3-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the chair considers the subject to be one that it would be grossly inappropriate for the Council to discuss,</span></p></div>
-           <div id="5-3-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the Council has already discussed the subject at a meeting in the same school term as the request is made and the chair is satisfied that there has been no material change in circumstances since that discussion, or</span></p></div>
+           <div id="5-3-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the following conditions are met:</span></p>
+             <div id="5-3-b-i"><p class="sub-sub-paragraph"><span class="id-number">(i)</span><span class="text">the Council has already discussed the subject, either:</span></p>
+                <div id="5-3-b-i-A"><p class="sub-sub-sub-paragraph"><span class="id-number">(A)</span><span class="text">at a meeting in the same school term as the request is made, or</span></p></div>
+                <div id="5-3-b-i-B"><p class="sub-sub-sub-paragraph"><span class="id-number">(B)</span><span class="text">at the last Council meeting, and</span></p></div>
+             </div>
+             <div id="5-3-b-ii"><p class="sub-sub-paragraph"><span class="id-number">(ii)</span><span class="text">the chair is satisfied that there has been no material change in circumstances since that discussion, or</span></p></div>
+           </div>
            <div id="5-3-c"><p class="sub-paragraph"><span class="id-number">(c)</span><span class="text">the subject is the decision of the chair to decline a previous request to have a meeting under this article.</span></p></div>
      </div>
      <div id="5-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">If the chair declines a request to have a meeting on a particular subject, the chair must without delay inform all members of:</span></p>
@@ -181,7 +228,7 @@ article p.sub-sub-paragraph {
             <div id="5-4-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the reasons for the chair's decision to decline it.</span></p></div>
      </div>
    <div class="drafterCommentary">
-     <p>As discussed, I've changed the restriction to discussing a matter again so it's once a term. This could mean a matter can come back at consecutive meetings. If, say, it was considered at the last meeting before the Christmas holidays, it could be brought back at a meeting in January. Is that ok? Would a restriction expressed as a number of meetings - 2 or 3 perhaps - work better?</p><p>Note I've added to the interpretation article at the end to explain one term is to be treated as running till the start of the next, otherwise this rule might have gaps if there's a meeting in the holidays.</p>  
+     <p>As requested, restriction on repeat discussions confined to one per term and can't discuss at the very next meeting to allow for request to discuss at first meeting of new term.</p>
    </div>
    </article>
    <article id="6">
@@ -191,14 +238,18 @@ article p.sub-sub-paragraph {
      <div id="6-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">If a meeting is being arranged as a result of a request to have a meeting on a particular subject under <a href="#5">article 5</a>, that subject must be on the meeting's agenda.</span></p>
      <div id="6-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">If a member of the Parent Forum requests that a particular subject be on the agenda of a Council meeting, that subject must be included on the agenda for a meeting unless:</span></p>
            <div id="6-4-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the chair considers the subject to be one that it would be grossly inappropriate for the Council to discuss, or</span></p></div>
-           <div id="6-4-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the Council has already discussed the subject at a meeting in the same school term as the request is made and the chair is satisfied that there has been no material change in circumstances since that discussion.</span></p></div>
+           <div id="6-4-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the following conditions are met:</span></p>
+             <div id="6-4-b-i"><p class="sub-sub-paragraph"><span class="id-number">(i)</span><span class="text">the Council has already discussed the subject, either:</span></p>
+                <div id="6-4-b-i-A"><p class="sub-sub-sub-paragraph"><span class="id-number">(A)</span><span class="text">at a meeting in the same school term as the request is made, or</span></p></div>
+                <div id="6-4-b-i-B"><p class="sub-sub-sub-paragraph"><span class="id-number">(B)</span><span class="text">at the last Council meeting, and</span></p></div>
+             </div>
+             <div id="6-4-b-ii"><p class="sub-sub-paragraph"><span class="id-number">(ii)</span><span class="text">the chair is satisfied that there has been no material change in circumstances since that discussion.</span></p></div>
+           </div>
      </div>
      <div id="6-5"><p class="paragraph"><span class="id-number">(5)</span><span class="text">If <a href="#6-4">paragraph (4)</a> requires that a particular subject be included on the agenda for a Council meeting:</span></p>
            <div id="6-5-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">it is to be included on the agenda for the first meeting to take place at least 10 days</span> after the request is made, but</span></p></div>
            <div id="6-5-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">it may be included on the agenda of an earlier meeting if the chair considers that appropriate.</span></p></div>
     </div>
-    <div class="drafterCommentary">
-      <p>As discussed, added requirement for agenda to be available as soon as practicable rather than having to form part of notice of meeting.</p>
     </article>
     <article id="7">
       <h3><span class="id-number">7</span><span class="text">Public notice</span></h3>
@@ -215,9 +266,6 @@ article p.sub-sub-paragraph {
        </div>
         <div id="7-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">It is for the Council to decide how to give public notice of a meeting.</span></p></div>
          <div id=7-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">In considering how to give public notice of a meeting, the Council must have particular regard to the importance of ensuring that members of the Parent Forum are aware of it.</span></p></div>
-       <div class="drafterCommentary">
-        <p>Does this work for not having to include the agenda in the notice? This should allow simply having a link to the site where the agenda will be posted, or even say on request.</p><p>For remote meetings, I've added some words to shore up that it's ok to say contact x for joining details.</p> 
-       </div>
      </article> 
     <article id="8">
       <h3><span class="id-number">8</span><span class="text">Invitations</span></h3>
@@ -237,9 +285,6 @@ article p.sub-sub-paragraph {
             <div id="8-3-f"><p class="sub-paragraph"><span class="id-number">(f)</span><span class="text">the member of Parliament (Westminster) returned for the constituency within which the school sits.</span></p></div>
        </div>
        <div id="8-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">In this article, "catchment area" has the meaning given in <a href="https://www.legislation.gov.uk/ukpga/1980/44/section/28A">section 28A(3D) of the Education (Scotland) Act 1980</a>.</span></p></div>
-       <div class="drafterCommentary">
-        <p>Tidied up as discussed:</p><ul><li>PTA added to (1)</li><li>Balerno HS parent council instead of headteacher</li><li>head pupil not boy / girl</li></ul> 
-       </div> 
      </article>
      <article id="9">
       <h3><span class="id-number">9</span><span class="text">Quorum</span></h3>
@@ -250,9 +295,6 @@ article p.sub-sub-paragraph {
        </div>
        <div id="9-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">If the offices of chair and vice chair are both vacant, the requirement for one of those office holders to be present does not apply.</span></p></div>
        <div id="9-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">When calculating one third of the members for the purposes of this article, any remainder is to be disregarded.</span></p></div>
-       <div class="drafterCommentary">
-         <p>Thinking about how few members there may be soon, and the possibility of joint chair and vice chairs, should we get rid of the requirement for a member who isn't chair or vice chair? If the council has plenty of members, the requirement for one third should ensure there's an "ordinary" member present. What would obviously be undesirable is a situation in which the council shrinks to a point that it can't have a quorate meeting to co-opt new members.</p>
-        </div>
       </article>
      <article id="10">
       <h3><span class="id-number">10</span><span class="text">Presiding</span></h3>
@@ -268,17 +310,14 @@ article p.sub-sub-paragraph {
         </div>
         <div id="10-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">If a member has informed those present at a meeting that the member has a conflict of interest in relation to a matter being discussed then, while that matter is under discussion:</span></p>
           <div id="10-4-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the member may not preside over the meeting, and</span></p></div>
-          <div id="10-4-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the member is not to be treated as present at the meeting for the purposes of this article.</span></p></div>
+          <div id="10-4-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the member is not to be treated as present at the meeting for the purposes of this article.</span></p></div>
         </div>       
-        <div class="drafterCommentary">
-         <p>Replaced having oldest member to preside with longest standing then drawing lots if there's a tie - nobody has to disclose their age :)</p> 
-        </div>
       </article>
       <article id="11">
       <h3><span class="id-number">11</span><span class="text">Record keeping</span></h3>
        <div id="11-1"><p class="paragraph"><span class="id-number">(1)</span><span class="text">Every Council meeting is to be minuted.</span></p></div>
        <div id="11-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">If the clerk is present at the meeting, the clerk is to take the minutes.</span></p></div>
-       <div id="11-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">If the clerk is not present (or the office of clerk is vacant), the presding member must appoint someone to take the minutes.</span></p></div>
+       <div id="11-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">If the clerk is not present (or the office of clerk is vacant), the presiding member must appoint someone to take the minutes.</span></p></div>
        </article>
       <article id="12">
       <h3><span class="id-number">12</span><span class="text">Attendance</span></h3>
@@ -337,15 +376,12 @@ article p.sub-sub-paragraph {
            <div id="16-6-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">ending on 31 March the next.</span></p></div>
          </div>
       <div class="drafterCommentary">
-        <p>As discussed, now up to the Council what making things publicly available looks like.</p><p>I've added an express ability to redact.</p>
+        <p>Question raised about whether there should be requirement to publish social media and GDPR policy. I'd be inclined not to mention them. Code of conduct gets a mention because the constitution refers to it, those other documents may or may not exist in future - keeping them out of the constitution keeps things flexible.</p> 
       </div>
       </article>
       <article id="17">
          <h3><span class="id-number">17</span><span class="text">Effect of procedural irregularities</span></h3>
          <div id="17-1"><p class="paragraph"><span class="id-number"></span><span class="text">The validity of a decision of the Council is not affected by any honest mistake or oversight in following the rules of this constitution.</span></p></div>
-         <div class="drafterCommentary">
-           <p>Does this seem ok? - good faith mistakes are fine (whether letting someone who should no longer be a member vote, or not declaring a conflict) - but with a guard for extreme cases of people knowingly breaking the rules (e.g. letting people who obviously aren't members vote) .</p>
-         </div>
      </article> 
     <h1>Part 2 <br/>Members and office holders</h1>
     <article id="18">
@@ -354,7 +390,7 @@ article p.sub-sub-paragraph {
       <div id="18-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">If there are fewer than 4 members, the Council must make all reasonable efforts to have at least 4 members as soon as practicable.</span></p></div>
      </article>
     <article id="19">
-      <h3 id="19"><span class="id-number">19</span><span class="text">Appointment</span></h3>
+      <h3><span class="id-number">19</span><span class="text">Appointment</span></h3>
       <div id="19-1"><p class="paragraph"><span class="id-number"></span><span class="text">A person becomes a member of the Council by being either:</span></p>
          <div id="19-1-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">appointed through the routine appointment process (see <a href="#20">article 20</a>), or</span></p></div>
          <div id="19-1-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">co-opted in accordance with <a href="#21">article 21</a>.</span></p></div>
@@ -367,7 +403,10 @@ article p.sub-sub-paragraph {
          <div id="20-2-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">how to invite applications, and</span></p></div>
          <div id="20-2-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the deadline for applications.</span></p></div>
       </div>
-      <div id="20-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">If, by the deadline for applications, the number of eligible applicants is less than or equal to the anticipated number of vacancies, those applicants become members at the end of the Parent Forum's annual general meeting that year.</span></p></div>
+      <div id="20-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">If, by the deadline for applications, the number of eligible applicants is less than or equal to the anticipated number of vacancies, those applicants become members:</span></p>
+         <div id="20-3-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">at the end of the Parent Forum's annual general meeting that year, or</span></p></div>
+         <div id="20-3-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">on an earlier date decided on by the Council.</span></p></div>
+      </div>
       <div id="20-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">If, by the deadline for applications, the number of eligible applicants is greater than the anticipated number of vacancies, an election is to be held to determine which of those applicants will become members.</span></p></div>
       <div id="20-5"><p class="paragraph"><span class="id-number">(5)</span><span class="text">It is for the Council to organise the election in a way which:</span></p>
         <div id="20-5-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">is fair and transparent,</span></p></div>
@@ -384,11 +423,7 @@ article p.sub-sub-paragraph {
          </div>
      </div>
      <div class="drafterCommentary">
-       <p>As discusssed:</p>
-       <ul><li>Appointment process now centred around AGM rather than first day of school term.</li>
-           <li>Council must consider inviting membership applications if numbers set to dip below 14, but don't have to invite applications.</li>
-           <li>The election process is for the Council to work out.</li>
-           <li>Ban on seeking re-appointment after removal from Council is 2 years.</li></ul>
+       <p>Per comment on last draft, allowance now made for starting new members before the end of AGM. Note however that no change made to when their tenure ends which will still be timed from AGM, which means earlier starts might get a bit more than 4 years - but I doubt that matters, it won't be by much.</p>
      </div>
      </article>
     <article id="21">
@@ -397,9 +432,6 @@ article p.sub-sub-paragraph {
       <div id="21-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">The Council may only co-opt as a member a person who:</span></p>
          <div id="21-2-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">is a member of the Parent Forum, and</span></p></div>
          <div id="21-2-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">has not been removed from the Council under <a href="#23">article 23</a> in the last 2 years.</span></p></div>
-      </div>
-      <div class="drafterCommentary">
-        <p>As discussed, added rule that can't co-opt someone dismissed in last 2 years.</p>
       </div>
     </article>
     <article id="22">
@@ -413,9 +445,6 @@ article p.sub-sub-paragraph {
       <div id="22-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">The period of appointment of a person appointed as a member through the routine appointment process expires immediately before the end of the annual general meeting of the Parent Forum in the year falling 4 years after the period of appointment began.</span></p></div>
       <div id="22-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">The period of appointment of a person co-opted as a member expires immediately before the end of the next annual general meeting of the Parent Forum following the person's co-option.</span></p></div>
       <div id="22-4"><p class="paragraph"><span class="id-number">(4)</span><span class="text">For the avoidance of doubt, a new period of appointment for a person may begin immediately after the person's last period of appointment expires.</span></p></div>
-      <div class="drafterCommentary">
-        <p>Only tweaks here are to reflect the move to AGM as the anchor point for appointments (rather than first day of term after summer holidays), and I've added a clarification that consecutive periods of appointment are fine.</p> 
-      </div>
     </article>
     <article id="23">
       <h3><span class="id-number">23</span><span class="text">Removal of member</span></h3>
@@ -440,9 +469,6 @@ article p.sub-sub-paragraph {
           <div id="23-6-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the notice of, and agenda for, the meeting, and
           <div id="23-6-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">the notice of the motion to remove the person's membership at a meeting of the Forum,</span></p></div>
       <p class="paragraph"><span class="id-number"></span><span class="text">is to say no more about the matter than a decision is to be taken on removing a person's membership under this article (the person is not to be named in those documents).</span></p></div>
-      <div class="drafterCommentary">
-        <p>As discussed, there's now a mechanism for the Council to unanimously agree to remove a member without going to the Forum.</p><p>The code of conduct won't form part of the constitution. I've added provision requiring the Council to have one and publish it.</p><p>The person facing removal isn't to be named in any public facing documents.</p>
-      </div>
     </article>
     <article id="24">
       <h3><span class="id-number">24</span><span class="text">Offices</span></h3>
@@ -465,9 +491,6 @@ article p.sub-sub-paragraph {
       <div id="24-7"><p class="paragraph"><span class="id-number">(7)</span><span class="text">There is no restriction on:</span></p>
          <div id="24-7-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the number of times a person can be appointed to the same office,</span></p></div>
          <div id="24-7-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">consecutive appointments to an office.</span></p></div>
-      </div>
-      <div class="drafterCommentary">
-         <p>As discussed:</p><ul><li>treasurer added</li><li>express allowance made for joint office holding - consequences of that where constitution assumes one person in office to be managed pragmatically by the joint holders</li><li>emphasised there's no limit to re-appointments</li></ul></p>
       </div>
     </article>
     <article id="25">
@@ -500,9 +523,6 @@ article p.sub-sub-paragraph {
          <div id="27-2-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">the terms of the motion, and</span></p></div>
          <div id="27-2-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">an explanation of how a person can have someone else (a proxy) vote in respect of the motion at the meeting on the person's behalf.</span></p></div>
       </div>
-    <div class="drafterCommentary">
-       <p>As discussed, notice periods reduced by 7 days.</p> 
-    </div>
     </article>
     <article id="28">
       <h3><span class="id-number">28</span><span class="text">Annual general meeting</span></h3>
@@ -524,9 +544,6 @@ article p.sub-sub-paragraph {
            <div id="28-3-c-ii"><p class="sub-sub-paragraph"><span class="id-number">(ii)</span><span class="text">the Council is satisfied that the subject is not one that it would be grossly inappropriate for the Forum to discuss.</span></p></div>
         </div>
       </div>
-    <div class="drafterCommentary">
-      <p>Added possiblity of things going on agenda by request that aren't motions.</p><p>Allowed requests for agenda items to be rebuffed on same grossly inappropriate test as elsewhere.</p> 
-    </div>
     </article>
     <article id="29">
       <h3><span class="id-number">29</span><span class="text">Extraordinary meeting</span></h3>
@@ -568,30 +585,22 @@ article p.sub-sub-paragraph {
         </div>
     </div>
      <div id="31-3"><p class="paragraph"><span class="id-number">(3)</span><span class="text">The Council must:</span></p>
-        <div id="31-3-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">make reasonable efforts to communicate to the members of the Parent Forum the email address it has chosen for receving requests, and</span></p></div>
+        <div id="31-3-a"><p class="sub-paragraph"><span class="id-number">(a)</span><span class="text">make reasonable efforts to communicate to the members of the Parent Forum the email address it has chosen for receiving requests, and</span></p></div>
         <div id="31-3-b"><p class="sub-paragraph"><span class="id-number">(b)</span><span class="text">ensure that the school office has the email address to give to anyone who asks for it.</span></p></div>
      </div>
-      <div class="drafterCommentary">
-         <p>Didn't really discuss this, is it ok?</p>
      </article>
      <article id="32">
        <h3><span class="id-number">32</span><span class="text">Code of conduct for members</span></h3>
        <div id="32-1"><p class="paragraph"><span class="id-number">(1)</span><span class="text">The Council is to continue to have a code of conduct for members.</span></p></div>
         <div id="32-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">The code may be modified, or replaced, by a decision of the Council. </span></p></div>
-        <div class="drafterCommentary">
-          <p>Haven't mentioned the social media policy. If breaches of that are to be taken into account in removal decisions, I'd recommend incorporating it into the code of conduct.</p>
-        </div>
      </article>
     <article id="33">
       <h3><span class="id-number">33</span><span class="text">Transition from previous constitution</span></h3>
         <div id="33-1"><p class="paragraph"><span class="id-number">(1)</span><span class="text">The validity of anything done prior to the adoption of this constitution is unaffected by its adoption.</span></p></div>
         <div id="33-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">A member's period of appointment that began (whether by co-option or otherwise) prior to this constitution being adopted expires in accordance with the rule that applied when the member was appointed.</span></p></div>
-      <div class="drafterCommentary">
-        <p>Ok with this? For periods of appointment the alternative would of course be to have them expire according to the new rules, which would at least line things up nicely with the AGM cycle for recruiting. That alignment should be achieved within a few years anyway though.</p> 
-        </div>
     </article>
     <article id="34">
-      <h3><span class="id-number">34</span><span class="text">Modifiction and replacement of this constitution</span></h3>
+      <h3><span class="id-number">34</span><span class="text">Modification and replacement of this constitution</span></h3>
       <div id="34-1"><p class="paragraph"><span class="id-number">(1)</span><span class="text">The process by which this constitution may be modified or replaced is set out in subsections (1)(h), (7) and (8) of <a href="https://www.legislation.gov.uk/asp/2006/8/section/8">section 8 of the Scottish Schools (Parental Involvement) Act 2006</a>.</span></p></div>
       <div id="34-2"><p class="paragraph"><span class="id-number">(2)</span><span class="text">It is a function of the Council to review this constitution from time to time (see subsection (1)(g) of that section).</span></p></div>
     </article>
@@ -617,5 +626,26 @@ article p.sub-sub-paragraph {
       </div>
      </article>
  </div>
+<script>
+  let headings = document.querySelectorAll("h1, h2, h3")
+  let strOutput = ""
+  let strNew = ""
+  let i = 0
+  do {
+    let element = headings[i].outerHTML
+    if (element.indexOf("<h3>") >= 0) {
+      let startPos = element.indexOf(">",5) + 1
+      let targetLength = element.indexOf("<",startPos) - startPos
+      let articleNum = element.substr(startPos, targetLength)
+      strNew = "<p><a href='#" + articleNum + "' onclick='toggle()'>" + headings[i].outerHTML + "</a></p>" 
+    } else {
+       strNew = "<p>" + headings[i].outerHTML + "</p>"
+    }
+    strOutput += strNew
+    i++
+  }
+  while (i < headings.length)  
+  document.getElementById("ToCInner").innerHTML = strOutput 
+</script>
 <body>
 </html>
